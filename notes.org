@@ -1,0 +1,17 @@
+#+TITLE: ASM notes for the os-dev book
+
+* DONE Booting a raw image for the bootsector on QEMU
+  CLOSED: [2017-06-06 Tue 17:51]
+https://unix.stackexchange.com/questions/276480/booting-a-raw-disk-image-in-qemu
+
+⇒  qemu-system-i386 -drive format=raw,file=biosprint.bin
+* DONE Assembling a sample file
+  CLOSED: [2017-06-06 Tue 17:51]
+⇒  nasm biosprint.s -f bin -o biosprint.bin
+* DONE Bochs problem with Xmap library
+  CLOSED: [2017-06-06 Tue 17:51]
+https://bugs.launchpad.net/ubuntu/+source/bochs/+bug/980167
+
+This problem still affects even Ubuntu 14.04. The aforementioned
+workaround of installing the "bochs-sdl" package and setting
+"display_library: sdl" in ~/.bochsrc resolves the problem.
